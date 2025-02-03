@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="actu.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+        <nav class="nav container">
+           <a href="" class="nav__logo">Logo</a>
+
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                 <li class="nav__item">
+                    <a href="actu.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Actualites</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="boutique.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Boutique</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="teams.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Equipes</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="#" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Galerie photo</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="#" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Contact</span>
+                    </a>
+                 </li>
+              </ul>
+
+              <!-- Close button -->
+              <div class="nav__close" id="nav-close">
+                 <i class="ri-close-large-line"></i>
+              </div>
+
+
+              <div class="nav__icons">
+                 <div class="nav__cart">
+                    <i class="fa-regular fa-user"></i>
+                 </div>
+                 <div class="nav__search">
+                    <input type="text" placeholder="Rechercher..." class="nav__search-input">
+                    <i class="ri-search-line"></i>
+                 </div>
+                 <div class="nav__cart">
+                    <i class="ri-shopping-cart-line"></i>
+                 </div>
+                 
+              </div>
+              
+             
+           </div>
+
+           <!-- Toggle button -->
+           <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line"></i>
+           </div>
+        </nav>
+     </header>
+
+    <section id="actualites" class="actualites">
+        <h2>Dernières Actualités</h2>
+        <div class="news-container">
+          <!-- Article 1 -->
+          <div class="news-card">
+            <img src="ASSETS/Players/Jason Tatum 🏀👀 NBA Finals Boston Celtics ☘️ Basketball Wallpaper Background.jpeg" alt="Image de l'actualité 1">
+            <h3>Jayson TATUM Champion NBA, c'est fait!!!</h3>
+            <p>JT devient le plus jeune joueur a decrocher une bague NBA dans sa granchise depuis Bill Russell en '71</p>
+            <a href="#" class="read-more">Lire plus</a>
+          </div>
+      
+          <!-- Article 2 -->
+          <div class="news-card">
+            <img src="ASSETS/Players/Jaren Jackson Jr_ _ Memphis Grizzlies.jpeg" alt="Image de l'actualité 2">
+            <h3>Jaren jackson Jr en feu!!!!</h3>
+            <p>Notre tismey prefere enflamme les parquets de la ligue, c'est hallucinant!!!</p>
+            <a href="#" class="read-more">Lire plus</a>
+          </div>
+      
+          <!-- Article 3 -->
+          <div class="news-card">
+            <img src="ASSETS/Players/96a4fceb-8785-41a8-822b-22ad3df44b86.jpeg" alt="Image de l'actualité 3">
+            <h3>Le retour attendu de Kyrie Irving!!!</h3>
+            <p>Kyrie Irving prêt à reprendre après sa blessure.</p>
+            <a href="#" class="read-more">Lire plus</a>
+          </div>
+
+          <div class="news-card">
+            <img src="ASSETS/Players/🦌.jpeg" alt="Image de l'actualité 3">
+            <h3>Le GOAT regale!!!</h3>
+            <p>"Il vieillit jamais ce mec, c'est dingue!!!"</p>
+            <a href="#" class="read-more">Lire plus</a>
+          </div>
+
+          <div class="news-card">
+            <img src="ASSETS/Players/Luka Dončić.jpeg" alt="Image de l'actualité 3">
+            <h3>La LUKA 5 PRETE?</h3>
+            <hp3>Luka Doncic devoilera sa nouvelle paire ce weekend!</p>
+            
+            <a href="#" class="read-more">Lire plus</a>
+          </div>
+
+          <div class="news-card">
+            <img src="ASSETS/Players/30e50b17-485e-4d8c-82c3-61f5d37d37ad.jpeg" alt="Image de l'actualité 3">
+            <h3>Le retour attendu de Kyrie Irving!!!</h3>
+            <p>Kyrie Irving prêt à reprendre après sa blessure.</p>
+            <a href="#" class="read-more">Lire plus</a>
+          </div>
+
+
+        </div>
+        <div class="view-more">
+          <button><a href="#" class="read-more">Voir plus</a>
+          </button>
+        </div>
+      </section>
+
+
+      
+         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+      
+      <script>
+          /*=============== SHOW MENU ===============*/
+const navMenu = document.getElementById('nav-menu'),
+navToggle = document.getElementById('nav-toggle'),
+navClose = document.getElementById('nav-close')
+
+/* Menu show */
+if(navToggle){
+navToggle.addEventListener('click', () =>{
+navMenu.classList.add('show-menu')
+})
+}
+
+/* Menu hidden */
+if(navClose){
+navClose.addEventListener('click', () =>{
+navMenu.classList.remove('show-menu')
+})
+}
+        /*document.querySelectorAll('.see-more').forEach(button => {
+    button.addEventListener('click', function (e) {
+        // Obtenir les coordonnées de l'événement
+        const x = e.clientX - button.getBoundingClientRect().left;
+        const y = e.clientY - button.getBoundingClientRect().top;
+
+        // Créer l'élément "ripple"
+        const ripple = document.createElement('span');
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        ripple.classList.add('ripple');
+
+        // Ajouter à l'intérieur du bouton
+        this.appendChild(ripple);
+
+        // Retirer le "ripple" après l'animation
+        setTimeout(() => ripple.remove(), 600);
+    });
+});*/
+
+      </script>
+      
+    
+</body>
+</html>

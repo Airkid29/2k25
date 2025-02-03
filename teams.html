@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="teams.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+        <nav class="nav container">
+           <a href="index.html" class="nav__logo">Logo</a>
+
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                 <li class="nav__item">
+                    <a href="actu.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Actualites</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="boutique.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Boutique</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="teams.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Equipes</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="#" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Galerie photo</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="#" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Contact</span>
+                    </a>
+                 </li>
+              </ul>
+
+              <!-- Close button -->
+              <div class="nav__close" id="nav-close">
+                 <i class="ri-close-large-line"></i>
+              </div>
+
+
+              <div class="nav__icons">
+                 <div class="nav__cart">
+                    <i class="fa-regular fa-user"></i>
+                 </div>
+                 <div class="nav__search">
+                    <input type="text" placeholder="Rechercher..." class="nav__search-input">
+                    <i class="ri-search-line"></i>
+                 </div>
+                 <div class="nav__cart">
+                    <i class="ri-shopping-cart-line"></i>
+                 </div>
+                 
+              </div>
+              
+              <!--<div class="nav__social">
+                 <a href="https://www.instagram.com/airkid29" target="_blank" class="nav__social-link">
+                    <i class="ri-instagram-line"></i>
+                 </a>
+
+                 <a href="https://github.com/" target="_blank" class="nav__social-link">
+                    <i class="ri-github-line"></i>
+                 </a>
+
+                 <a href="https://dribbble.com/" target="_blank" class="nav__social-link">
+                    <i class="ri-dribbble-line"></i>
+                 </a>
+
+                 <a href="https://www.linkedin.com/" target="_blank" class="nav__social-link">
+                    <i class="ri-linkedin-box-line"></i>
+                 </a>
+              </div>-->
+           </div>
+
+           <!-- Toggle button -->
+           <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line"></i>
+           </div>
+        </nav>
+     </header>
+
+     <section class="teams" id="teams">
+      <div class="container">
+        <h2 class="section__title">Les Équipes NBA</h2>
+        <input type="text" id="search" placeholder="Rechercher une équipe..." class="teams__search">
+        <div class="teams__grid" id="teams-grid">
+          <!-- Les équipes seront générées dynamiquement -->
+        </div>
+      </div>
+    </section>
+    
+    <style>
+      .teams {
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+    
+      .teams__search {
+        width: 100%;
+        max-width: 400px;
+        padding: 0.8rem;
+        margin-bottom: 2rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+    
+      .teams__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+      }
+    
+      .team__card {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+    
+      .team__card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      }
+    
+      .team__logo {
+        width: 100px;
+        height: auto;
+        margin-bottom: 1rem;
+      }
+    
+      .team__name {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    
+      .team__btn {
+        background: #007bff;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+    
+      .team__btn:hover {
+        background: #0056b3;
+      }
+    </style>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const teams = [
+          { name: "Atlanta Hawks", logo: "ASSETS/logos/hawks.png" , URL: "https://fr.wikipedia.org/wiki/Hawks_d%27Atlanta"},
+          { name: "Boston Celtics", logo: "ASSETS/logos/boston.png", URL: "https://fr.wikipedia.org/wiki/Celtics_de_Boston" },
+          { name: "Brooklyn Nets", logo: "ASSETS/logos/nets.png", URL: "https://fr.wikipedia.org/wiki/Nets_de_Brooklyn" },
+          { name: "Charlotte Hornets", logo: "ASSETS/logos/hornets.png", URL:"https://fr.wikipedia.org/wiki/Hornets_de_Charlotte_(NBA)" },
+          { name: "Chicago Bulls", logo: "ASSETS/logos/c42ee2757ee7de47fa59b558fa4561c8-removebg-preview.png", URL:"https://fr.wikipedia.org/wiki/Bulls_de_Chicago" },
+          { name: "Cleveland Cavaliers", logo: "ASSETS/logos/cavs.png", URL: "https://fr.wikipedia.org/wiki/Cavaliers_de_Cleveland" },
+          { name: "dallas Mavericks", logo: "ASSETS/logos/mavs.png", URL: "https://fr.wikipedia.org/wiki/Mavericks_de_Dallas"},
+          { name: " Denver Nuggets", logo: "ASSETS/logos/nuggets.png", URL: "https://fr.wikipedia.org/wiki/Nuggets_de_Denver" },
+          { name: "Detroit Pistons", logo: "ASSETS/logos/pistons logo.png" , URL: "https://fr.wikipedia.org/wiki/Pistons_de_D%C3%A9troit"},
+          { name: "Golden States Warriors", logo: "ASSETS/logos/gsw.png", URL: "https://fr.wikipedia.org/wiki/Warriors_de_Golden_State" },
+          { name: "Houston Rockets", logo: "ASSETS/logos/rockets logo.png", URL: "https://fr.wikipedia.org/wiki/Rockets_de_Houston" },
+          { name: "indiana Pacers", logo: "ASSETS/logos/pacers.png", URL: "https://fr.wikipedia.org/wiki/Pacers_de_l%27Indiana" },
+          { name: "Los Angeles Clippers", logo: "ASSETS/logos/clippers.png", URL: "https://fr.wikipedia.org/wiki/Clippers_de_Los_Angeles" },
+          { name: "Los Angeles Lakers", logo: "ASSETS/logos/lakers.png" , URL : "https://fr.wikipedia.org/wiki/Lakers_de_Los_Angeles"},
+          { name: "Memphis Grizzlies", logo: "ASSETS/logos/grizzlies logo.png" , URL: "https://fr.wikipedia.org/wiki/Grizzlies_de_Memphis" },
+          { name: "Miami Heat", logo: "ASSETS/logos/heat.png" , URL: "https://fr.wikipedia.org/wiki/Heat_de_Miami"},
+          { name: "Milwaulkee Bucks", logo: "ASSETS/logos/bucks.png", URL: "https://fr.wikipedia.org/wiki/Bucks_de_Milwaukee" },
+          { name: " Minnesota Wolves", logo: "ASSETS/logos/wolves.png", URL: "https://fr.wikipedia.org/wiki/Timberwolves_du_Minnesota" },
+          { name: "New Orleans Pelicans", logo: "ASSETS/logos/pelicans.png" , URL: "https://fr.wikipedia.org/wiki/Pelicans_de_La_Nouvelle-Orl%C3%A9ans"},
+          { name: "New York Knicks", logo: "ASSETS/logos/knicks.png" , URL: "https://fr.wikipedia.org/wiki/Knicks_de_New_York"},
+          { name: "Oklahoma City Thunder", logo: "ASSETS/logos/okc.png", URL: "https://fr.wikipedia.org/wiki/Thunder_d%27Oklahoma_City" },
+          { name: "Orlando magics", logo: "ASSETS/logos/magics.png" , URL: "https://fr.wikipedia.org/wiki/Magic_d%27Orlando"},
+          { name: " Philadelphia 76ers", logo: "ASSETS/logos/76ers.png", url : "https://fr.wikipedia.org/wiki/76ers_de_Philadelphie" },
+          { name: "Phoenix Suns", logo: "ASSETS/logos/suns.png" , URL: "https://fr.wikipedia.org/wiki/Suns_de_Phoenix"},
+          { name: "Portland Trail Blaizers", logo: "ASSETS/logos/blazers.png", URL: "https://fr.wikipedia.org/wiki/Trail_Blazers_de_Portland" },
+          { name: "sacramento Kings", logo: "ASSETS/logos/kings logo.png", URL: "https://fr.wikipedia.org/wiki/Kings_de_Sacramento" },
+          { name: "san Antonio Spurs", logo: "ASSETS/logos/spurs.png", URL: "https://fr.wikipedia.org/wiki/Spurs_de_San_Antonio" },
+          { name: "Toronto raptors", logo: "ASSETS/logos/raptors.png", url: "https://fr.wikipedia.org/wiki/Raptors_de_Toronto" },
+          { name: "Utah Jazz", logo: "ASSETS/logos/jazz.png", URL: "https://fr.wikipedia.org/wiki/Jazz_de_l%27Utah" },
+          { name: "Washington Wizards", logo: "ASSETS/logos/wizards.png", url: "https://fr.wikipedia.org/wiki/Wizards_de_Washington" }
+        ];
+    
+        const grid = document.getElementById("teams-grid");
+        const search = document.getElementById("search");
+    
+        function displayTeams(filter = "") {
+          grid.innerHTML = "";
+          teams
+            .filter(team => team.name.toLowerCase().includes(filter.toLowerCase()))
+            .forEach(team => {
+              const card = document.createElement("div");
+              card.classList.add("team__card");
+              card.innerHTML = `
+                <img src="${team.logo}" alt="${team.name}" class="team__logo">
+                <h3 class="team__name">${team.name}</h3>
+                <button class="team__btn"><a href = "${team.URL}" target="_blank" style="color: white;">Voir Détails</a></button>
+              `;
+              grid.appendChild(card);
+            });
+        }
+    
+        search.addEventListener("input", () => displayTeams(search.value));
+    
+        displayTeams();
+      });
+    </script>
+    
+      
+    
+</body>
+</html>
