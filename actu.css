@@ -1,0 +1,130 @@
+
+.actualites {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .actualites h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+  }
+  
+  .news-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .news-card {
+    background-color: white;
+    width: 330px;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .news-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+  
+  .news-card h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px;
+  }
+  
+  .news-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px;
+  }
+  
+  .news-card .read-more {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: #1a1a1a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .news-card .read-more:hover {
+    background-color: #f44336;
+  }
+  
+  .view-more {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  
+  .view-more button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+ .read-more{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+ }
+ .view-more:hover{
+  background-color: black;
+ }
+  
+  .see-more {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #f44336;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    overflow: hidden; /* Nécessaire pour limiter l'effet ripple */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.see-more:hover {
+    background-color: #d32f2f;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.see-more .ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    background: rgba(255, 255, 255, 0.6);
+    animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}

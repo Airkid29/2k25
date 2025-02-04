@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- Font Awesome pour les icônes -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="boutique.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="boutique" class="shop">
+
+        <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+        <nav class="nav container">
+           <a href="index.html" class="nav__logo">Logo</a>
+
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                 <li class="nav__item">
+                    <a href="actu.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Actualites</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="boutique.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Boutique</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="teams.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Equipes</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="#" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Galerie photo</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="#" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Contact</span>
+                    </a>
+                 </li>
+              </ul>
+
+              <!-- Close button -->
+              <div class="nav__close" id="nav-close">
+                 <i class="ri-close-large-line"></i>
+              </div>
+
+
+              <div class="nav__icons">
+                <div class="nav__cart">
+                  <i class="ri-shopping-cart-line"></i>
+               </div>
+                 <div class="nav__cart">
+                    <i class="fa-regular fa-user"></i>
+                 </div>
+                 <div class="nav__search">
+                    <input type="text" placeholder="Rechercher..." class="nav__search-input">
+                    <i class="ri-search-line"></i>
+                 </div>
+                 
+                 
+              </div>
+              
+             
+           </div>
+
+           <!-- Toggle button -->
+           <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line"></i>
+           </div>
+        </nav>
+     </header>
+    
+        <h2>Bienvenue dans la Boutique NBA</h2>
+        
+        <div class="shop-filters">
+          <button class="filter-button active" data-filter="all">Tout</button>
+          <button class="filter-button" data-filter="maillots">Maillots</button>
+          <button class="filter-button" data-filter="accessoires">Accessoires</button>
+          <button class="filter-button" data-filter="chaussures">Chaussures</button>
+        </div>
+        <div class="shop-grid">
+          <div class="product-card" data-category="maillots">
+            <img src="ASSETS/NBA/Men_21_Joel_Embiid_Jersey_White_City_Edition_Philadelphia_76ers_Jersey-removebg-preview.png" alt="Maillot Lakers">
+            <h3>Maillot Lakers</h3>
+            <p class="price">50 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="accessoires">
+            <img src="ASSETS/SHOES/casquette3.png" alt="Casquette NBA">
+            <h3>Casquette NBA</h3>
+            <p class="price">20 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="chaussures">
+            <img src="ASSETS/SHOES/KI2.png" alt="Chaussures Nike">
+            <h3>Chaussures Nike</h3>
+            <p class="price">100 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="maillots">
+            <img src="ASSETS/NBA/Youth_Nike_Jalen_Brunson_White_New_York_Knicks_Association_Swingman_Jersey-removebg-preview.png" alt="Maillot Lakers">
+            <h3>Maillot Lakers</h3>
+            <p class="price">50 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="accessoires">
+            <img src="ASSETS/NBA/casquette celtic.png" alt="Casquette NBA">
+            <h3>Casquette NBA</h3>
+            <p class="price">20 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="chaussures">
+            <img src="ASSETS/SHOES/AE1.png" alt="Chaussures Nike">
+            <h3>Chaussures Nike</h3>
+            <p class="price">100 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="maillots">
+            <img src="ASSETS/NBA/pacers_away.png" alt="Maillot Lakers">
+            <h3>Maillot Lakers</h3>
+            <p class="price">50 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="accessoires">
+            <img src="ASSETS/NBA/sac.png" alt="Casquette NBA">
+            <h3>Casquette NBA</h3>
+            <p class="price">20 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="chaussures">
+            <img src="ASSETS/SHOES/LUKA3.png" alt="Chaussures Nike">
+            <h3>Chaussures Nike</h3>
+            <p class="price">100 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="maillots">
+            <img src="ASSETS/NBA/heat_home.png" alt="Maillot Lakers">
+            <h3>Maillot Lakers</h3>
+            <p class="price">50 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="accessoires">
+            <img src="ASSETS/NBA/coude.png" alt="Casquette NBA">
+            <h3>Casquette NBA</h3>
+            <p class="price">20 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="chaussures">
+            <img src="ASSETS/SHOES/JT1WH.png" alt="Chaussures Nike">
+            <h3>JT1 NEW EDITION</h3>
+            <p class="price">100 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="maillots">
+            <img src="ASSETS/NBA/LaMelo_Ball_Charlotte_Hornets_2024_25_City_Edition_Men_s_Nike_Dri-FIT_NBA_Swingman_Jersey-removebg-preview.png" alt="Maillot Lakers">
+            <h3>Maillot Lakers</h3>
+            <p class="price">50 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="accessoires">
+            <img src="ASSETS/NBA/casquette warriors.png" alt="Casquette NBA">
+            <h3>Casquette NBA</h3>
+            <p class="price">20 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="chaussures">
+            <img src="ASSETS/SHOES/KD12.png" alt="Chaussures Nike">
+            <h3></h3>
+            <p class="price">100 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+
+          <div class="product-card" data-category="maillots">
+            <img src="ASSETS/NBA/Nike_Franz_Wagner_Orlando_Magic_City_Edition_2023_24_Dri-fit_Nba_Swingman_Jersey_-_Blue-removebg-preview.png" alt="Maillot Lakers">
+            <h3>Maillot Lakers</h3>
+            <p class="price">50 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="accessoires">
+            <img src="ASSETS/SHOES/casquette3.png" alt="Casquette NBA">
+            <h3>Casquette NBA</h3>
+            <p class="price">20 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="chaussures">
+            <img src="ASSETS/SHOES/KD15.png" alt="Chaussures Nike">
+            <h3>KD16 COLLEGE</h3>
+            <p class="price">100 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+
+          <div class="product-card" data-category="maillots">
+            <img src="ASSETS/NBA/Milwaukee_Bucks_Sterling_Brown_23_White_202119_Earned_Edition_Jersey-removebg-preview.png" alt="Maillot Lakers">
+            <h3>Maillot Lakers</h3>
+            <p class="price">50 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="accessoires">
+            <img src="ASSETS/SHOES/casquette3.png" alt="Casquette NBA">
+            <h3>Casquette NBA</h3>
+            <p class="price">20 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="chaussures">
+            <img src="ASSETS/SHOES/KD18.png" alt="Chaussures Nike">
+            <h3>KD 18 PINK EDTITION</h3>
+            <p class="price">100 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+
+          <div class="product-card" data-category="maillots">
+            <img src="ASSETS/NBA/Tracy_McGrady_Toronto_Raptors_Mitchell___Ness_Youth_1998-99_Hardwood_Classics_Swingman_Throwback_Jersey_-_Purple-removebg-preview.png" alt="Maillot Lakers">
+            <h3>Maillot Lakers</h3>
+            <p class="price">50 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="accessoires">
+            <img src="ASSETS/SHOES/casquette3.png" alt="Casquette NBA">
+            <h3>Casquette NBA</h3>
+            <p class="price">20 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="chaussures">
+            <img src="ASSETS/SHOES/KOBEADIDAS.png" alt="Chaussures Nike">
+            <h3>Kobe Adidas 2006</h3>
+            <p class="price">100 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+
+          <div class="product-card" data-category="maillots">
+            <img src="ASSETS/NBA/Unisex_Detroit_Pistons_Cade_Cunningham_Nike_White_Swingman_Jersey_-_Association_Edition-removebg-preview.png" alt="Maillot Lakers">
+            <h3>Maillot Lakers</h3>
+            <p class="price">50 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="accessoires">
+            <img src="ASSETS/SHOES/casquette3.png" alt="Casquette NBA">
+            <h3>Casquette NBA</h3>
+            <p class="price">20 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="chaussures">
+            <img src="ASSETS/SHOES/LBJ20.png" alt="Chaussures Nike">
+            <h3>KD16 Aunt Pearl</h3>
+            <p class="price">100 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+
+          <div class="product-card" data-category="maillots">
+            <img src="ASSETS/NBA/Toronto_Raptors_Kyle_Lowry_7_2021_Tampa_City_Pink_Blue_Jersey_Gift_For_Kyle_Lowry_Fans-removebg-preview.png" alt="Maillot Lakers">
+            <h3>Maillot Lakers</h3>
+            <p class="price">50 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="accessoires">
+            <img src="ASSETS/SHOES/casquette3.png" alt="Casquette NBA">
+            <h3>Casquette NBA</h3>
+            <p class="price">20 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="chaussures">
+            <img src="ASSETS/SHOES/LBJXX.png" alt="Chaussures Nike">
+            <h3>Lebron XX</h3>
+            <p class="price">100 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <!-- Ajouter d'autres produits -->
+        </div>
+      </section>
+
+
+      <script>
+        const shopFilterButtons = document.querySelectorAll(".filter-button");
+        const productCards = document.querySelectorAll(".product-card");
+
+            shopFilterButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                const filter = button.getAttribute("data-filter");
+    
+
+        // Supprimer l'état actif précédent
+            document.querySelector(".filter-button.active").classList.remove("active");
+            button.classList.add("active");
+
+            productCards.forEach(card => {
+                if (filter === "all" || card.getAttribute("data-category") === filter) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+
+      </script>
+      
+    
+</body>
+</html>

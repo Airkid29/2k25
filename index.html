@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="style.css">
+
+      <title>NBA 2K25</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="index.html" class="nav__logo">Logo</a>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="actu.html" class="nav__link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Actualites</span>
+                     </a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="boutique.html" class="nav__link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Boutique</span>
+                     </a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="teams.html" class="nav__link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Equipes</span>
+                     </a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="login.html" class="nav__link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Galerie photo</span>
+                     </a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#" class="nav__link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Contact</span>
+                     </a>
+                  </li>
+               </ul>
+
+               <!-- Close button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-large-line"></i>
+               </div>
+
+
+               <div class="nav__icons">
+                  <div class="nav__cart">
+                     <i class="fa-regular fa-user"></i>
+                  </div>
+                  <div class="nav__search">
+                     <input type="text" placeholder="Rechercher..." class="nav__search-input">
+                     <i class="ri-search-line"></i>
+                  </div>
+                  <div class="nav__cart">
+                     <a href="cart.html"><i class="ri-shopping-cart-line"></i></a>
+                  </div>
+                  
+               </div>
+               
+               <!--<div class="nav__social">
+                  <a href="https://www.instagram.com/airkid29" target="_blank" class="nav__social-link">
+                     <i class="ri-instagram-line"></i>
+                  </a>
+
+                  <a href="https://github.com/" target="_blank" class="nav__social-link">
+                     <i class="ri-github-line"></i>
+                  </a>
+
+                  <a href="https://dribbble.com/" target="_blank" class="nav__social-link">
+                     <i class="ri-dribbble-line"></i>
+                  </a>
+
+                  <a href="https://www.linkedin.com/" target="_blank" class="nav__social-link">
+                     <i class="ri-linkedin-box-line"></i>
+                  </a>
+               </div>-->
+            </div>
+
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main>
+         <!-- Insert page sections -->
+         <section class="hero">
+            <div class="hero-text">
+                <h1>Bienvenue dans le monde de la NBA et WNBA</h1>
+                <p>Explorez vos équipes, achetez vos produits et suivez les dernières actualités du basket.</p>
+                <button onclick="window.location.href='teams.html'"><a href="teams.html" style="text-decoration: none; color: white;">Explorer les équipes</a></button>
+            </div>
+            <div class="hero-image">
+                <img src="ASSETS/NBA/208560a4dd6f118924979bbcc9487448-removebg-preview.png" alt="Joueur NBA">
+            </div>
+        </section>
+
+        <section id="tranding">
+         <div class="container">
+           <h3 class="text-center section-subheading">Popular section</h3>
+           <h1 class="text-center section-heading">Trending Players</h1>
+         </div>
+         <div class="container">
+           <div class="swiper tranding-slider">
+             <div class="swiper-wrapper">
+               <!-- Slide-start -->
+               <div class="swiper-slide tranding-slide">
+                 <div class="tranding-slide-img">
+                   <img src="ASSETS/Players/Jayson Tatum.jpeg" alt="Tranding">
+                 </div>
+                 <div class="tranding-slide-content">
+                  <!--<h1 class="food-price">$20</h1>-->
+                   <div class="tranding-slide-content-bottom">
+                     <h2 class="food-name">
+                       Jayson TATUM
+                     </h2>
+                     <h3 class="food-rating">
+                       <span>4.5</span>
+                       <div class="rating">
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                       </div>
+                     </h3>
+                   </div>
+                 </div>
+               </div>
+               <!-- Slide-end -->
+               <!-- Slide-start -->
+               <div class="swiper-slide tranding-slide">
+                 <div class="tranding-slide-img">
+                   <img src="ASSETS/Players/New Lakers Lock Screen Pic 🔥.jpeg" alt="Tranding">
+                 </div>
+                 <div class="tranding-slide-content">
+                   <!--<h1 class="food-price">$20</h1>-->
+                   <div class="tranding-slide-content-bottom">
+                     <h2 class="food-name">
+                       Anthony Davies
+                     </h2>
+                     <h3 class="food-rating">
+                       <span>4.5</span>
+                       <div class="rating">
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                       </div>
+                     </h3>
+                   </div>
+                 </div>
+               </div>
+               <!-- Slide-end -->
+               <!-- Slide-start -->
+               <div class="swiper-slide tranding-slide">
+                 <div class="tranding-slide-img">
+                   <img src="ASSETS/Players/35+ points in three straight road playoff games….jpeg" alt="Tranding">
+                 </div>
+                 <div class="tranding-slide-content">
+                   <!--<h1 class="food-price">$20</h1>-->
+                   <div class="tranding-slide-content-bottom">
+                     <h2 class="food-name">
+                       Anthony Edwards
+                     </h2>
+                     <h3 class="food-rating">
+                       <span>4.5</span>
+                       <div class="rating">
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                       </div>
+                     </h3>
+                   </div>
+                 </div>
+               </div>
+               <!-- Slide-end -->
+               <!-- Slide-start -->
+               <div class="swiper-slide tranding-slide">
+                 <div class="tranding-slide-img">
+                   <img src="ASSETS/Players/Shai Gilgeous-Alexander.jpeg" alt="Tranding">
+                 </div>
+                 <div class="tranding-slide-content">
+                   <!--<h1 class="food-price">$20</h1>-->
+                   <div class="tranding-slide-content-bottom">
+                     <h2 class="food-name">
+                       Shai Gilgeous-Alexander
+                     </h2>
+                     <h3 class="food-rating">
+                       <span>4.5</span>
+                       <div class="rating">
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                       </div>
+                     </h3>
+                   </div>
+                 </div>
+               </div>
+               <!-- Slide-end -->
+               <!-- Slide-start -->
+               <div class="swiper-slide tranding-slide">
+                 <div class="tranding-slide-img">
+                   <img src="ASSETS/Players/0413575f-df1f-4fa3-9fcc-3e5d929e3a05.jpeg" alt="Tranding">
+                 </div>
+                 <div class="tranding-slide-content">
+                   <!--<h1 class="food-price">$20</h1>-->
+                   <div class="tranding-slide-content-bottom">
+                     <h2 class="food-name">
+                       Kevin Durant
+                     </h2>
+                     <h3 class="food-rating">
+                       <span>4.5</span>
+                       <div class="rating">
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                       </div>
+                     </h3>
+                   </div>
+                 </div>
+               </div>
+               <!-- Slide-end -->
+               <!-- Slide-start -->
+               <div class="swiper-slide tranding-slide">
+                 <div class="tranding-slide-img">
+                   <img src="ASSETS/Players/Jayson Tatum.jpeg" alt="Tranding">
+                 </div>
+                 <div class="tranding-slide-content">
+                   <!--<h1 class="food-price">$20</h1>-->
+                   <div class="tranding-slide-content-bottom">
+                     <h2 class="food-name">
+                       Jayson Tatum
+                     </h2>
+                     <h3 class="food-rating">
+                       <span>4.5</span>
+                       <div class="rating">
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                       </div>
+                     </h3>
+                   </div>
+                 </div>
+               </div>
+               <!-- Slide-end -->
+               <!-- Slide-start -->
+               <div class="swiper-slide tranding-slide">
+                 <div class="tranding-slide-img">
+                   <img src="ASSETS/Players/35+ points in three straight road playoff games….jpeg" alt="Tranding">
+                 </div>
+                 <div class="tranding-slide-content">
+                   <!--<h1 class="food-price">$20</h1>-->
+                   <div class="tranding-slide-content-bottom">
+                     <h2 class="food-name">
+                       Ant man
+                     </h2>
+                     <h3 class="food-rating">
+                       <span>4.5</span>
+                       <div class="rating">
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                         <ion-icon name="star"></ion-icon>
+                       </div>
+                     </h3>
+                   </div>
+                 </div>
+               </div>
+               <!-- Slide-end -->
+             </div>
+   
+             <div class="tranding-slider-control">
+               <div class="swiper-button-prev slider-arrow">
+                 <ion-icon name="arrow-back-outline"></ion-icon>
+               </div>
+               <div class="swiper-button-next slider-arrow">
+                 <ion-icon name="arrow-forward-outline"></ion-icon>
+               </div>
+               <div class="swiper-pagination"></div>
+             </div>
+   
+           </div>
+         </div>
+       </section>
+       <!--CHAMPIONS TEAMS-->
+
+       <section class="teams">
+         <h2>Les champions des #3 dernieres editions</h2>
+         <div class="team-cards">
+             <div class="team-card">
+                 <img src="ASSETS/logos/boston.png" alt="Orlando Magics">
+                 <h3>BOSTON CELTICS</h3>
+                 <a href="https://youtu.be/uHe83Y4Wptc?si=W0iBUU0OJ8MXXSL1" target="_blank" style="text-decoration: none;">Voir leur ascencion</a>
+             </div>
+             <div class="team-card">
+                 <img src="ASSETS/logos/nuggets.png" alt="Orlando Magics">
+                 <h3>DENVER NUGGETS</h3>
+                 <a href="https://youtu.be/MULh1TNk7nc?si=bMCgVP1pr44jMmyW" target="_blank" style="text-decoration: none;">Voir leur ascencion</a>
+             </div>
+             <div class="team-card">
+                 <img src="ASSETS/logos/gsw.png" alt="Orlando Magics">
+                 <h3>DUBS WARRIORS</h3>
+                 <a href="https://youtu.be/MlY_OkMI1m8?si=pRcjAokcbspoI2qH" target="_blank" style="text-decoration: none;">Voir leur ascencion</a>
+             </div>
+             
+     </div>
+         </div>
+     </section>
+
+
+       
+      </main>
+
+
+      <footer>
+         <p>&copy; 2025 NBA Store. Tous droits réservés.</p>
+         <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+     </footer>
+
+
+
+
+
+
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+      
+      <!--=============== MAIN JS ===============-->
+      <script>
+          /*=============== SHOW MENU ===============*/
+const navMenu = document.getElementById('nav-menu'),
+navToggle = document.getElementById('nav-toggle'),
+navClose = document.getElementById('nav-close')
+
+/* Menu show */
+if(navToggle){
+navToggle.addEventListener('click', () =>{
+navMenu.classList.add('show-menu')
+})
+}
+
+/* Menu hidden */
+if(navClose){
+navClose.addEventListener('click', () =>{
+navMenu.classList.remove('show-menu')
+})
+}
+
+/*caroussel*/
+var TrandingSlider = new Swiper('.tranding-slider', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 2.5,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+      </script>
+   </body>
+</html>
