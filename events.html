@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- Font Awesome pour les icônes -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="boutique.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="boutique" class="shop">
+
+        <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+        <nav class="nav container">
+           <a href="index.html" class="nav__logo">Logo</a>
+
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                 <li class="nav__item">
+                    <a href="actu.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Actualites</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="boutique.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Boutique</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="teams.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Equipes</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="#" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Galerie photo</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="#" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Contact</span>
+                    </a>
+                 </li>
+              </ul>
+
+              <!-- Close button -->
+              <div class="nav__close" id="nav-close">
+                 <i class="ri-close-large-line"></i>
+              </div>
+
+
+              <div class="nav__icons">
+                <div class="nav__cart">
+                  <i class="ri-shopping-cart-line"></i>
+               </div>
+                 <div class="nav__cart">
+                    <i class="fa-regular fa-user"></i>
+                 </div>
+                 <div class="nav__search">
+                    <input type="text" placeholder="Rechercher..." class="nav__search-input">
+                    <i class="ri-search-line"></i>
+                 </div>
+                 
+                 
+              </div>
+              
+             
+           </div>
+
+           <!-- Toggle button -->
+           <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line"></i>
+           </div>
+        </nav>
+     </header>
+    
+        <h2>Bienvenue dans la Boutique NBA</h2>
+        
+        <div class="shop-filters">
+          <button class="filter-button active" data-filter="all">Tout</button>
+          <button class="filter-button" data-filter="maillots">NBA-WNBA</button>
+          <button class="filter-button" data-filter="accessoires">BAL</button>
+          <button class="filter-button" data-filter="chaussures">TAL</button>
+        </div>
+        <div class="shop-grid">
+          <div class="product-card" data-category="maillots">
+            <img src="ASSETS/MATCHS/8a5599fe-05a1-4160-b4b5-dbd65e453f89.jpeg" alt="Maillot Lakers">
+            <h3>Maillot Lakers</h3>
+            <p class="price">50 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="accessoires">
+            <img src="ASSETS/SHOES/casquette3.png" alt="Casquette NBA">
+            <h3>Casquette NBA</h3>
+            <p class="price">20 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          <div class="product-card" data-category="chaussures">
+            <img src="ASSETS/SHOES/KI2.png" alt="Chaussures Nike">
+            <h3>Chaussures Nike</h3>
+            <p class="price">100 €</p>
+            <button class="shop-button">Ajouter au Panier</button>
+          </div>
+          
+          <!-- Ajouter d'autres produits -->
+        </div>
+      </section>
+
+
+      <script>
+        const shopFilterButtons = document.querySelectorAll(".filter-button");
+        const productCards = document.querySelectorAll(".product-card");
+
+            shopFilterButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                const filter = button.getAttribute("data-filter");
+    
+
+        // Supprimer l'état actif précédent
+            document.querySelector(".filter-button.active").classList.remove("active");
+            button.classList.add("active");
+
+            productCards.forEach(card => {
+                if (filter === "all" || card.getAttribute("data-category") === filter) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+
+      </script>
+      
+    
+</body>
+</html>
