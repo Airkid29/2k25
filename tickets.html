@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Tickets</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Mes Tickets</h1>
+  <div id="tickets-container"></div>
+
+  <script>
+    function displayTickets() {
+      const tickets = localStorage.getItem("tickets");
+      const container = document.getElementById("tickets-container");
+
+      if (!tickets || tickets === "[]") {
+        container.innerHTML = "<p>Aucun ticket acheté.</p>";
+        return;
+      }
+
+      const ticketList = JSON.parse(tickets);
+      let html = "<ul>";
+      ticketList.forEach(ticket => {
+        html += `<li>${ticket.name} - Quantité: ${ticket.quantity} - Prix: ${ticket.price * ticket.quantity}€</li>`;
+      });
+      html += "</ul>";
+
+      container.innerHTML = html;
+    }
+    displayTickets();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Événements NBA & Local</title>
+  <link rel="stylesheet" href="event.css">
+</head>
+<body>
+
+  <h1>Événements & Matchs</h1>
+  <a href="tickets.html">MES TICKETS</a>
+
+  <section id="nba-events">
+    <h2>🏀 Matchs NBA</h2>
+    <div class="event-card" data-event-id="nba1" data-event-name="Lakers vs Celtics" data-event-price="80">
+      <img src="ASSETS/MATCHS/8a5599fe-05a1-4160-b4b5-dbd65e453f89.jpeg" alt="Lakers vs Celtics">
+      <p><strong>Match :</strong> Lakers vs Celtics</p>
+      <p><strong>Date :</strong> 12 février 2025</p>
+      <p><strong>Lieu :</strong> Crypto.com Arena, LA</p>
+      <p><strong>Prix :</strong> 80 €</p>
+      <button class="buy-ticket">Acheter un ticket</button>
+    </div>
+    <div class="event-card" data-event-id="nba1" data-event-name="Lakers vs Celtics" data-event-price="80">
+        <img src="ASSETS/MATCHS/8a5599fe-05a1-4160-b4b5-dbd65e453f89.jpeg" alt="Lakers vs Celtics">
+        <p><strong>Match :</strong> Lakers vs Celtics</p>
+        <p><strong>Date :</strong> 12 février 2025</p>
+        <p><strong>Lieu :</strong> Crypto.com Arena, LA</p>
+        <p><strong>Prix :</strong> 80 €</p>
+        <button class="buy-ticket">Acheter un ticket</button>
+      </div>
+      <div class="event-card" data-event-id="nba1" data-event-name="Lakers vs Celtics" data-event-price="80">
+        <img src="ASSETS/MATCHS/8a5599fe-05a1-4160-b4b5-dbd65e453f89.jpeg" alt="Lakers vs Celtics">
+        <p><strong>Match :</strong> Lakers vs Celtics</p>
+        <p><strong>Date :</strong> 12 février 2025</p>
+        <p><strong>Lieu :</strong> Crypto.com Arena, LA</p>
+        <p><strong>Prix :</strong> 80 €</p>
+        <button class="buy-ticket">Acheter un ticket</button>
+      </div>
+  </section>
+
+  <section id="local-events">
+    <h2>🇹🇬 Matchs Championnat Local</h2>
+    <div class="event-card" data-event-id="local1" data-event-name="ASKO vs Dyto" data-event-price="10">
+      <img src="ASSETS/local/asko-vs-dyto.jpg" alt="ASKO vs Dyto">
+      <p><strong>Match :</strong> ASKO vs Dyto</p>
+      <p><strong>Date :</strong> 15 février 2025</p>
+      <p><strong>Lieu :</strong> Stade de Kégué, Lomé</p>
+      <p><strong>Prix :</strong> 10 €</p>
+      <button class="buy-ticket">Acheter un ticket</button>
+    </div>
+  </section>
+
+  <script>
+    // Vérifie si l'utilisateur est connecté
+function isAuthenticated() {
+  return localStorage.getItem("userToken") !== null;
+}
+
+// Récupère les tickets depuis le localStorage
+function getTickets() {
+  const tickets = localStorage.getItem("tickets");
+  return tickets ? JSON.parse(tickets) : [];
+}
+
+// Enregistre les tickets dans le localStorage
+function saveTickets(tickets) {
+  localStorage.setItem("tickets", JSON.stringify(tickets));
+}
+
+// Fonction d'achat de ticket
+function buyTicket(event) {
+  let tickets = getTickets();
+  
+  // Vérifier si l'événement est déjà réservé
+  const eventId = event.id;
+  const index = tickets.findIndex(t => t.id === eventId);
+  
+  if (index !== -1) {
+    tickets[index].quantity += 1;
+  } else {
+    event.quantity = 1;
+    tickets.push(event);
+  }
+
+  saveTickets(tickets);
+  alert(`Ticket pour "${event.name}" acheté avec succès !`);
+}
+
+// Gestion des boutons "Acheter un ticket"
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".buy-ticket");
+  
+  buttons.forEach(button => {
+    button.addEventListener("click", function() {
+      if (!isAuthenticated()) {
+        window.location.href = "login.html";
+        return;
+      }
+
+      const eventCard = this.closest(".event-card");
+      const event = {
+        id: eventCard.getAttribute("data-event-id"),
+        name: eventCard.getAttribute("data-event-name"),
+        price: parseFloat(eventCard.getAttribute("data-event-price")),
+      };
+
+      buyTicket(event);
+    });
+  });
+});
+
+  </script>
+</body>
+</html>
