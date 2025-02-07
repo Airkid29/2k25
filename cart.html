@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    
   <h1>Votre Panier 🛒</h1>
   <section id="cart-container"></section>
   <button id="clear-cart">Vider le panier</button>
@@ -18,6 +19,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       let cartContainer = document.getElementById("cart-container");
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
 
       if (cart.length === 0) {
         cartContainer.innerHTML = "<p>Votre panier est vide.</p>";
@@ -32,6 +34,8 @@
           cartContainer.appendChild(div);
         });
 
+
+
         document.querySelectorAll(".remove").forEach((button) => {
           button.addEventListener("click", function () {
             let index = this.dataset.index;
@@ -42,11 +46,16 @@
         });
       }
 
+
+
+
       document.getElementById("clear-cart").addEventListener("click", function () {
         localStorage.removeItem("cart");
         location.reload();
       });
     });
+
+
   </script>
 
 </body>
