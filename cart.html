@@ -1,82 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panier</title>
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="cart.js">
 </head>
 <body>
-    
 
+  <h1>Votre Panier 🛒</h1>
+  <section id="cart-container"></section>
+  <button id="clear-cart">Vider le panier</button>
 
+  <script src="cart.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let cartContainer = document.getElementById("cart-container");
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+      if (cart.length === 0) {
+        cartContainer.innerHTML = "<p>Votre panier est vide.</p>";
+      } else {
+        cart.forEach((item, index) => {
+          let div = document.createElement("div");
+          div.classList.add("cart-item");
+          div.innerHTML = `
+            <p>${item.name} - ${item.price}€ x ${item.quantity}</p>
+            <button class="remove" data-index="${index}">❌</button>
+          `;
+          cartContainer.appendChild(div);
+        });
 
-
-    <script>
-        // Fonction factice pour vérifier l'authentification
-function isAuthenticated() {
-  // Ici, tu devrais vérifier si l'utilisateur est connecté (par exemple, via un token stocké)
-  // Pour cet exemple, on retourne false pour simuler un utilisateur non connecté.
-  // Remplace par ta logique d'authentification.
-  return localStorage.getItem("userToken") !== null;
-}
-
-// Fonction pour récupérer le panier depuis le localStorage
-function getCart() {
-  const cart = localStorage.getItem("cart");
-  return cart ? JSON.parse(cart) : [];
-}
-
-// Fonction pour enregistrer le panier dans le localStorage
-function saveCart(cart) {
-  localStorage.setItem("cart", JSON.stringify(cart));
-}
-
-// Fonction pour ajouter un produit au panier
-function addToCart(product) {
-  let cart = getCart();
-  
-  // Vérifie si le produit est déjà dans le panier (par product id)
-  const index = cart.findIndex(item => item.id === product.id);
-  if (index !== -1) {
-    // Si déjà présent, on incrémente la quantité
-    cart[index].quantity += 1;
-  } else {
-    // Sinon, on ajoute l'article avec une quantité initiale de 1
-    product.quantity = 1;
-    cart.push(product);
-  }
-  
-  saveCart(cart);
-  alert(`Le produit "${product.name}" a été ajouté au panier.`);
-}
-
-// Écouteur sur les boutons "Ajouter au panier"
-document.addEventListener("DOMContentLoaded", () => {
-  const addButtons = document.querySelectorAll(".add-to-cart");
-  addButtons.forEach(button => {
-    button.addEventListener("click", function() {
-      // Vérifier si l'utilisateur est connecté
-      if (!isAuthenticated()) {
-        // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
-        window.location.href = "signin.html";
-        return;
+        document.querySelectorAll(".remove").forEach((button) => {
+          button.addEventListener("click", function () {
+            let index = this.dataset.index;
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            location.reload();
+          });
+        });
       }
-      
-      // Récupérer les informations du produit à partir de l'élément parent
-      const productCard = this.closest(".product-card");
-      const product = {
-        id: productCard.getAttribute("data-product-id"),
-        name: productCard.getAttribute("data-product-name"),
-        price: parseFloat(productCard.getAttribute("data-product-price")),
-        image: productCard.querySelector("img").src
-      };
-      
-      addToCart(product);
-    });
-  });
-});
 
-    </script>
+      document.getElementById("clear-cart").addEventListener("click", function () {
+        localStorage.removeItem("cart");
+        location.reload();
+      });
+    });
+  </script>
+
 </body>
 </html>
