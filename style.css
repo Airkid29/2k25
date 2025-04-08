@@ -262,6 +262,28 @@ a {
 }
 
 
+/* Styles pour les boutons Connexion & Inscription */
+.nav__auth {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.nav__btn {
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background: #007bff;
+}
+
+.nav__btn--secondary {
+  background: #28a745;
+}
+
+
+
 @media screen and (max-width: 1150px) {
   .nav__icons {
     position: absolute;

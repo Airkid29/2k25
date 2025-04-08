@@ -17,92 +17,59 @@
    <body>
       <!--==================== HEADER ====================-->
       <header class="header" id="header">
-         <nav class="nav container">
-            <a href="index.html" class="nav__logo">Logo</a>
-
-            <div class="nav__menu" id="nav-menu">
-               <ul class="nav__list">
-                  <li class="nav__item">
-                     <a href="actu.html" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>Actualites</span>
-                     </a>
-                  </li>
-
-                  <li class="nav__item">
-                     <a href="boutique.html" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>Boutique</span>
-                     </a>
-                  </li>
-
-                  <li class="nav__item">
-                     <a href="teams.html" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>Equipes</span>
-                     </a>
-                  </li>
-
-                  <li class="nav__item">
-                     <a href="events.html" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>Galerie photo</span>
-                     </a>
-                  </li>
-
-                  <li class="nav__item">
-                     <a href="login.html" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>Connexion</span>
-                     </a>
-                  </li>
-               </ul>
-
-               <!-- Close button -->
-               <div class="nav__close" id="nav-close">
-                  <i class="ri-close-large-line"></i>
-               </div>
-
-
-               <div class="nav__icons">
-                  <div class="nav__cart">
-                     <i class="fa-regular fa-user"></i>
-                  </div>
-                  <div class="nav__search">
-                     <input type="text" placeholder="Rechercher..." class="nav__search-input">
-                     <i class="ri-search-line"></i>
-                  </div>
-                  <div class="nav__cart">
-                     <a href="cart.html"><i class="ri-shopping-cart-line"></i></a>
-                  </div>
-                  
-               </div>
-               
-               <!--<div class="nav__social">
-                  <a href="https://www.instagram.com/airkid29" target="_blank" class="nav__social-link">
-                     <i class="ri-instagram-line"></i>
-                  </a>
-
-                  <a href="https://github.com/" target="_blank" class="nav__social-link">
-                     <i class="ri-github-line"></i>
-                  </a>
-
-                  <a href="https://dribbble.com/" target="_blank" class="nav__social-link">
-                     <i class="ri-dribbble-line"></i>
-                  </a>
-
-                  <a href="https://www.linkedin.com/" target="_blank" class="nav__social-link">
-                     <i class="ri-linkedin-box-line"></i>
-                  </a>
-               </div>-->
-            </div>
-
-            <!-- Toggle button -->
-            <div class="nav__toggle" id="nav-toggle">
-               <i class="ri-menu-line"></i>
-            </div>
-         </nav>
-      </header>
+        <nav class="nav container">
+           <a href="index.html" class="nav__logo">Logo</a>
+     
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                 <li class="nav__item">
+                    <a href="actu.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Actualités</span>
+                    </a>
+                 </li>
+     
+                 <li class="nav__item">
+                    <a href="boutique.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Boutique</span>
+                    </a>
+                 </li>
+     
+                 <li class="nav__item">
+                    <a href="teams.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Équipes</span>
+                    </a>
+                 </li>
+     
+                 <li class="nav__item">
+                    <a href="events.html" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Événements</span>
+                    </a>
+                 </li>
+              </ul>
+     
+              <!-- Boutons Connexion & Inscription -->
+              <div class="nav__auth">
+                 <a href="login.html" class="nav__btn">Connexion</a>
+                 <a href="signup.html" class="nav__btn nav__btn--secondary">S'inscrire</a>
+              </div>
+     
+              <!-- Bouton pour fermer le menu sur mobile -->
+              <div class="nav__close" id="nav-close">
+                 <i class="ri-close-large-line"></i>
+              </div>
+           </div>
+     
+           <!-- Bouton du menu burger -->
+           <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line"></i>
+           </div>
+        </nav>
+     </header>
+     
 
       <!--==================== MAIN ====================-->
       <main>
@@ -362,6 +329,7 @@
       <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
       
       <!--=============== MAIN JS ===============-->
+      <script src="main.js"></script>
       <script>
           /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
